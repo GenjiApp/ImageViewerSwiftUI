@@ -65,8 +65,46 @@ struct ContentView: View {
           }
         }
     }
+    .toolbar {
+      MagnifyToolbarButtons(document: self.document)
+    }
   }
 }
+
+struct MagnifyToolbarButtons: ToolbarContent {
+
+  let document: ImageDocument
+
+  var body: some ToolbarContent {
+
+    // iPhoneでは ToolbarItemPlacement.automatic で上部ツールバーに
+    // 複数のボタンを指定しても最初のひとつしか表示されないので、.bottomBar 指定に。
+    // macOSには .bottomBar がないので .automatic 指定で場合分け。
+    #if os(iOS)
+    let placement = ToolbarItemPlacement.bottomBar
+    #else
+    let placement = ToolbarItemPlacement.automatic
+    #endif
+    ToolbarItemGroup(placement: placement) {
+      Button(action: {
+        self.document.scaleViewSize(0.5, animate: true)
+      }) {
+        Image(systemName: "minus.magnifyingglass")
+      }
+      Button(action: {
+        self.document.resetViewSize(animate: true)
+      }) {
+        Image(systemName: "equal.circle")
+      }
+      Button(action: {
+        self.document.scaleViewSize(2.0, animate: true)
+      }) {
+        Image(systemName: "plus.magnifyingglass")
+      }
+    }
+  }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
