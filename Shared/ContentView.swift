@@ -60,9 +60,7 @@ struct ContentView: View {
                height: self.document.viewSize.height)
         .gesture(magnificationGesture)
         .onTapGesture(count: 2) {
-          withAnimation {
-            self.document.resetViewSize()
-          }
+          self.document.resetViewSize(animate: true)
         }
     }
     .toolbar {
