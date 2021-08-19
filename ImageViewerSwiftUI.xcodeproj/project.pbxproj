@@ -30,6 +30,7 @@
 		B616CC4126CBFAFF00302A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B616CC4226CBFAFF00302A17 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B616CC5326CD64B100302A17 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		B616CC5626CE878000302A17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		B616CC2926CBFAFD00302A17 = {
 			isa = PBXGroup;
 			children = (
+				B616CC5626CE878000302A17 /* README.md */,
 				B616CC2E26CBFAFD00302A17 /* Shared */,
 				B616CC3926CBFAFF00302A17 /* iOS */,
 				B616CC4026CBFAFF00302A17 /* macOS */,
