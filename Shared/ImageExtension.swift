@@ -8,18 +8,18 @@
 import SwiftUI
 
 #if os(macOS)
-typealias MyImage = NSImage
+typealias IVImage = NSImage
 #elseif os(iOS)
-typealias MyImage = UIImage
+typealias IVImage = UIImage
 #endif
 
 extension Image {
 
-  init(myImage: MyImage) {
+  init(ivImage: IVImage) {
     #if os(macOS)
-    self.init(nsImage: myImage)
+    self.init(nsImage: ivImage)
     #elseif os(iOS)
-    self.init(uiImage: myImage)
+    self.init(uiImage: ivImage)
     #endif
   }
 }

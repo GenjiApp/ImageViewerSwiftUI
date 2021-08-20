@@ -47,7 +47,7 @@ struct ContentView: View {
       }
 
     ScrollView([.horizontal, .vertical]) {
-      Image(myImage: document.image)
+      Image(ivImage: document.image)
         .resizable()
         .aspectRatio(contentMode: .fit)
         // ジェスチャ中の見掛け上の表示サイズ変更をする。

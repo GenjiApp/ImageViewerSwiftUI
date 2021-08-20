@@ -12,7 +12,7 @@ import UniformTypeIdentifiers
 // viewSize プロパティは拡大・縮小時の表示サイズを格納する。
 class ImageDocument: ReferenceFileDocument {
 
-  typealias Snapshot = MyImage
+  typealias Snapshot = IVImage
 
   static var readableContentTypes: [UTType] {
     [
@@ -21,17 +21,17 @@ class ImageDocument: ReferenceFileDocument {
     ]
   }
 
-  var image: MyImage
+  var image: IVImage
   @Published var viewSize: CGSize
 
-  init(image: MyImage = MyImage()) {
+  init(image: IVImage = IVImage()) {
     self.image = image
     self.viewSize = image.size
   }
 
   required init(configuration: ReadConfiguration) throws {
     guard let data = configuration.file.regularFileContents,
-          let image = MyImage(data: data)
+          let image = IVImage(data: data)
     else {
       throw CocoaError(.fileReadCorruptFile)
     }
@@ -40,11 +40,11 @@ class ImageDocument: ReferenceFileDocument {
   }
 
   // 閲覧専用なので保存用メソッドは使わない。
-  func fileWrapper(snapshot: MyImage, configuration: WriteConfiguration) throws -> FileWrapper {
+  func fileWrapper(snapshot: IVImage, configuration: WriteConfiguration) throws -> FileWrapper {
     throw CocoaError(.fileWriteUnknown)
   }
 
-  func snapshot(contentType: UTType) throws -> MyImage {
+  func snapshot(contentType: UTType) throws -> IVImage {
     return self.image
   }
 
