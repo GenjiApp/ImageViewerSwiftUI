@@ -68,6 +68,10 @@
 				<array>
 					<string>png</string>
 				</array>
+				<key>public.mime-type</key>
+				<array>
+					<string>image/png</string>
+				</array>
 			</dict>
 		</dict>
 		<dict>
@@ -86,6 +90,10 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>jpg</string>
+				</array>
+				<key>public.mime-type</key>
+				<array>
+					<string>image/jpeg</string>
 				</array>
 			</dict>
 		</dict>
