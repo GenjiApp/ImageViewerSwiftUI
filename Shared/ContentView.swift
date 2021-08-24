@@ -12,11 +12,10 @@ struct ContentView: View {
   @ObservedObject var document: ImageDocument
   @GestureState private var scale: CGFloat = 1.0
 
-  var body: some View {
-
-    // ジェスチャ中の表示サイズ変更は .scaleEffect() で表現し、
-    // ジェスチャ終了時に .frame(width:, height:) で実際の表示サイズを変更する。
-    let magnificationGesture = MagnificationGesture()
+  // ジェスチャ中の表示サイズ変更は .scaleEffect() で表現し、
+  // ジェスチャ終了時に .frame(width:, height:) で実際の表示サイズを変更する。
+  var magnificationGesture: some Gesture {
+    MagnificationGesture()
       // gestureState に値を代入すると、それが @GestureState のプロパティに入る。
       // @GestureState のプロパティはジェスチャ終了時に自動的に初期値にリセットされる。
       // 急激な拡大・縮小を防ぐため、値の範囲に制限を加える。
@@ -45,6 +44,9 @@ struct ContentView: View {
         }
         self.document.scaleViewSize(scale)
       }
+  }
+
+  var body: some View {
 
     ScrollView([.horizontal, .vertical]) {
       Image(ivImage: document.image)
