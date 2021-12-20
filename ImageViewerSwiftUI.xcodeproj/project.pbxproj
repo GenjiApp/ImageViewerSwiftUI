@@ -19,6 +19,8 @@
 		B616CC5526CD64B100302A17 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B616CC5326CD64B100302A17 /* ImageExtension.swift */; };
 		B64F9E232770BAAD00DE36B1 /* FocusedSceneDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F9E222770BAAD00DE36B1 /* FocusedSceneDocument.swift */; };
 		B64F9E242770BAAD00DE36B1 /* FocusedSceneDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F9E222770BAAD00DE36B1 /* FocusedSceneDocument.swift */; };
+		B64F9E262770C13300DE36B1 /* ZoomCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F9E252770C13300DE36B1 /* ZoomCommands.swift */; };
+		B64F9E272770C13300DE36B1 /* ZoomCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64F9E252770C13300DE36B1 /* ZoomCommands.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,7 @@
 		B616CC5626CE878000302A17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B616CC5726CE999300302A17 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B64F9E222770BAAD00DE36B1 /* FocusedSceneDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedSceneDocument.swift; sourceTree = "<group>"; };
+		B64F9E252770C13300DE36B1 /* ZoomCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomCommands.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 				B616CC3126CBFAFD00302A17 /* ContentView.swift */,
 				B616CC5326CD64B100302A17 /* ImageExtension.swift */,
 				B64F9E222770BAAD00DE36B1 /* FocusedSceneDocument.swift */,
+				B64F9E252770C13300DE36B1 /* ZoomCommands.swift */,
 				B616CC3226CBFAFF00302A17 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -205,6 +209,7 @@
 			files = (
 				B616CC4326CBFAFF00302A17 /* ImageViewerSwiftUIApp.swift in Sources */,
 				B616CC4526CBFAFF00302A17 /* ImageDocument.swift in Sources */,
+				B64F9E262770C13300DE36B1 /* ZoomCommands.swift in Sources */,
 				B616CC4726CBFAFF00302A17 /* ContentView.swift in Sources */,
 				B64F9E232770BAAD00DE36B1 /* FocusedSceneDocument.swift in Sources */,
 				B616CC5426CD64B100302A17 /* ImageExtension.swift in Sources */,
@@ -217,6 +222,7 @@
 			files = (
 				B616CC4426CBFAFF00302A17 /* ImageViewerSwiftUIApp.swift in Sources */,
 				B616CC4626CBFAFF00302A17 /* ImageDocument.swift in Sources */,
+				B64F9E272770C13300DE36B1 /* ZoomCommands.swift in Sources */,
 				B616CC4826CBFAFF00302A17 /* ContentView.swift in Sources */,
 				B64F9E242770BAAD00DE36B1 /* FocusedSceneDocument.swift in Sources */,
 				B616CC5526CD64B100302A17 /* ImageExtension.swift in Sources */,
